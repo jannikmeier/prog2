@@ -1,1 +1,27 @@
-<h1>TEST</h1>
+<h1>MyWines</h1>
+<a href="add">Wein hinzuf&uuml;gen</a>
+<table>
+    <tr>
+    <th>Name</th>
+    <th>Jahrgang</th>
+    <th>Flaschengr&ouml;sse</th>
+    <th>Passende Gerichte</th>
+    <th>Traubensorte</th>
+    <th>Region</th>
+    <th>Bezahlter Preis in CHF</th>
+    <th>&nbsp;</th>
+    </tr>
+    {% for wine in wines %}
+        
+        <tr>
+            <td>{{ wine.name }}</td>
+            <td>{{ wine.year }}</td>
+            <td>{{ wine.size }}</td>
+            <td>{{ wine.meals }}</td>
+            <td>{{ wine.grape }}</td>
+            <td>{{ wine.region }}</td>
+            <td>{{ wine.pricepaid }}</td>
+            <td><a href="detail/{{ wine.id }}">Details</a></td>
+        </tr>
+    {% endfor %}
+</table>
