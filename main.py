@@ -1,5 +1,3 @@
-# name, year, size, meals, grape, region, pricepaid
-
 from flask import Flask, render_template, request
 import json
 
@@ -8,9 +6,12 @@ app = Flask("mywines")
 # Routes
 
 @app.route('/')
-@app.route('/index')
-def overview():
+def home():
     return render_template("index.html", wines=load_wines())
+
+@app.route('/cellar')
+def cellar():
+    return render_template("cellar.html", wines=load_wines())
 
 @app.route('/detail/<id>')
 def detail(id):
@@ -24,6 +25,10 @@ def add():
 def add_post():
     add_new_wine(request.form['name'], request.form['year'], request.form['size'], request.form['meals'], request.form['grape'], request.form['region'], request.form['pricepaid'])
     return render_template("add.html")
+
+@app.route('/winepairing/<id>')
+def winepairing(id):
+    return render_template("winepairing.html", wine=load_wine_by_id(id))
 
 # Weinverwaltung
 

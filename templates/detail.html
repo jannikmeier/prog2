@@ -1,31 +1,41 @@
-<table>
-    <tr>
-        <th>Name</th>
-        <td>{{ wine.name }}</td>
-    </tr>
-    <tr>
-        <th>Jahrgang</th>
-        <td>{{ wine.year }}</td>
-    </tr>
-    <tr>
-        <th>Flaschengr&ouml;sse</th>
-        <td>{{ wine.size }}</td>
-    </tr>
-    <tr>
-        <th>Passende Gerichte</th>
-        <td>{{ wine.meals }}</td>
-    </tr>
-    <tr>
-        <th>Traubensorte</th>
-        <td>{{ wine.grape }}</td>
-    </tr>
-    <tr>
-        <th>Region</th>
-        <td>{{ wine.region }}</td>
-    </tr>
-    <tr>
-        <th>Bezahlter Preis in CHF</th>
-        <td>{{ wine.pricepaid }}</td>
-    </tr>
-</table>
-<a href="/index">Zur&uuml;ck zur &Uuml;bersicht</a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MyWines | {{ wine.name }} {{ wine.year }}</title>
+        <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>MyWines</h1>
+        <a href="/index" class="btn btn-primary" role="button">Zur&uuml;ck zur &Uuml;bersicht</a>
+        <table>
+            <tr>
+                <th>Name</th>
+                <td>{{ wine.name }}</td>
+            </tr>
+            <tr>
+                <th>Jahrgang</th>
+                <td>{{ wine.year }}</td>
+            </tr>
+            <tr>
+                <th>Flaschengr&ouml;sse</th>
+                <td>{{ wine.size }}</td>
+            </tr>
+            <tr>
+                <th>Passende Gerichte</th>
+                <td>{{ wine.meals }}</td>
+            </tr>
+            <tr>
+                <th>Traubensorte</th>
+                <td>{{ wine.grape }}</td>
+            </tr>
+            <tr>
+                <th>Region</th>
+                <td>{{ wine.region }}</td>
+            </tr>
+            <tr>
+                <th>Bezahlter Preis in CHF</th>
+                <td>{{ wine.pricepaid }}</td>
+            </tr>
+        </table>
+    </body>
+</html>
