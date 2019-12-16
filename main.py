@@ -26,9 +26,9 @@ def add_post():
     add_new_wine(request.form['name'], request.form['year'], request.form['size'], request.form['meals'], request.form['grape'], request.form['region'], request.form['pricepaid'])
     return render_template("add.html")
 
-@app.route('/winepairing/<id>')
-def winepairing(id):
-    return render_template("winepairing.html", wine=load_wine_by_id(id))
+@app.route('/winepairing')
+def winepairing():
+    return render_template("winepairing.html", wines=load_wines())
 
 # Weinverwaltung
 

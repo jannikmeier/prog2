@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>MyWines | {{ wine.name }} {{ wine.year }}</title>
+        <title>{{ wine.name }} {{ wine.year }} | MyWines</title>
         <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
     </head>
     <body>
-        <h1>MyWines</h1>
-        <a href="/index" class="btn btn-primary" role="button">Zur&uuml;ck zur &Uuml;bersicht</a>
+        <h1>Details zu {{ wine.name }} {{ wine.year }}</h1>
+        <a href="/" class="btn btn-secondary btn-sm" role="button">MyWines</a>
+        <a href="/cellar" class="btn btn-primary btn-sm" role="button">Zur Weinkeller</a>
         <table>
             <tr>
                 <th>Name</th>

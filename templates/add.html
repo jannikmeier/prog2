@@ -1,32 +1,43 @@
-<form method="POST" action="/add">
-    <div>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name"/>
-    </div>
-    <div>
-        <label for="year">Jahrgang</label>
-        <input type="text" id="year" name="year"/>
-    </div>
-    <div>
-        <label for="size">Flaschengr&ouml;sse</label>
-        <input type="text" id="size" name="size"/>
-    </div>
-    <div>
-        <label for="meals">Passende Gerichte</label>
-        <input type="text" id="meals" name="meals"/>
-    </div>
-    <div>
-        <label for="grape">Traubensorte</label>
-        <input type="text" id="grape" name="grape"/>
-    </div>
-    <div>
-        <label for="region">Region</label>
-        <input type="text" id="region" name="region"/>
-    </div>
-    <div>
-        <label for="pricepaid">Bezahlter Preis in CHF</label>
-        <input type="text" id="pricepaid" name="pricepaid"/>
-    </div>
-    <input type="submit" value="Submit"/>
-</form>
-<a href="/index">Zur&uuml;ck zur &Uuml;bersicht</a>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Wein hinzuf&uuml;gen | MyWines</title>
+        <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
+    </head>
+    <body>
+        <h1>Wein hinzuf&uuml;gen</h1>
+        <a href="/" class="btn btn-secondary btn-sm" role="button">MyWines</a>
+        <a href="/cellar" class="btn btn-primary btn-sm" role="button">Zur Weinkeller</a>
+        <form method="POST" action="/add">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name"/>
+            </div>
+            <div>
+                <label for="year">Jahrgang</label>
+                <input type="text" id="year" name="year"/>
+            </div>
+            <div>
+                <label for="size">Flaschengr&ouml;sse</label>
+                <input type="text" id="size" name="size"/>
+            </div>
+            <div>
+                <label for="meals">Passende Gerichte</label>
+                <input type="text" id="meals" name="meals"/>
+            </div>
+            <div>
+                <label for="grape">Traubensorte</label>
+                <input type="text" id="grape" name="grape"/>
+            </div>
+            <div>
+                <label for="region">Region</label>
+                <input type="text" id="region" name="region"/>
+            </div>
+            <div>
+                <label for="pricepaid">Bezahlter Preis in CHF</label>
+                <input type="text" id="pricepaid" name="pricepaid"/>
+            </div>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
