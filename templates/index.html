@@ -3,19 +3,35 @@
     <head>
         <title>MyWines</title>
         <link rel="stylesheet" type="text/css" href="static/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/main.css">
     </head>
     <body>
+        <nav class="navbar navbar-dark navbar-expand-sm">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">MyWines</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/cellar">Weinkeller</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/winepairing">Wine Pairing</a>
+            </li>
+          </ul>
+        </nav>
         <h1>MyWines</h1>
         <p>Herzlich Willkommen! In vino veritas.</p>
+        <hr/>
         <h2>Weinkeller</h2>
         <p>Hier gehts zum Weinkeller:</p>
-        <a href="/cellar" class="btn btn-primary btn-sm" role="button">Weinkeller</a>
+        <a href="/cellar" class="btn btn-primary" role="button">Weinkeller</a>
+        <hr/>
         <h2>Wine Pairing</h2>
         <p>Welcher Wein zu welchem Essen?</p>
         <form action="winepairing" class="form-inline">
-            <label class="sr-only" for="meal">Meal</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="meal" placeholder="Pasta, Steak, etc.">
-            <button type="submit" class="btn btn-primary mb-2">Passenden Wein dazu finden</button>
-          </form>
+          <label class="sr-only" for="meal">Meal</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="meal" placeholder="Pasta, Steak, etc." style="width:inherit;"/>
+          <button type="submit" class="btn btn-primary mb-2">Passenden Wein dazu finden</button>
+        </form>
     </body>
 </html>

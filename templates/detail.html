@@ -3,11 +3,23 @@
     <head>
         <title>{{ wine.name }} {{ wine.year }} | MyWines</title>
         <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/main.css">
     </head>
     <body>
+        <nav class="navbar navbar-dark navbar-expand-sm">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">MyWines</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/cellar">Weinkeller</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/winepairing">Wine Pairing</a>
+              </li>
+            </ul>
+          </nav>
         <h1>Details zu {{ wine.name }} {{ wine.year }}</h1>
-        <a href="/" class="btn btn-secondary btn-sm" role="button">MyWines</a>
-        <a href="/cellar" class="btn btn-primary btn-sm" role="button">Zur Weinkeller</a>
         <table>
             <tr>
                 <th>Name</th>
@@ -38,5 +50,6 @@
                 <td>{{ wine.pricepaid }}</td>
             </tr>
         </table>
+        <a href="/cellar" class="btn btn-primary btn-sm" role="button">Zur&uuml;ck zum Weinkeller</a>
     </body>
 </html>

@@ -1,3 +1,14 @@
-* {
-    background: #000;
+nav.navbar {
+    background-color: rgba(94, 24, 37, 1);
 }
+
+.btn-primary {
+    background-color: rgba(94, 24, 37, 1);
+    border-color: rgba(94, 24, 37, 1);
+}
+
+.btn-primary:hover {
+    background-color: rgba(94, 24, 37, 0.8);
+    border-color: rgba(94, 24, 37, 0.8);
+}
+

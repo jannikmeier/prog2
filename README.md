@@ -1,4 +1,4 @@
-# Projekt "MyWines"
+# Projektvorhaben für Projekt "MyWines"
 
 ## Abstract
 Eine App um Weine zu verwalten und Empfehlungen zu erhalten.
@@ -9,3 +9,5 @@ Es können Weine hinzugefügt und gelöscht (wenn getrunken) werden. Beim Hinzuf
 
 ## Anforderungen
 Liste (Dictionary), Loops & eine Art Datenbank im Hintergrund.
+
+# Installationsanleitung
