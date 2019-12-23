@@ -12,3 +12,10 @@ nav.navbar {
     border-color: rgba(94, 24, 37, 0.8);
 }
 
+.row {
+    margin-top: 50px;
+}
+
+hr {
+    margin: 25px 0;
+}

@@ -3,53 +3,59 @@
     <head>
         <title>{{ wine.name }} {{ wine.year }} | MyWines</title>
         <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="static/main.css">
+        <link rel="stylesheet" type="text/css" href="../static/main.css">
     </head>
     <body>
         <nav class="navbar navbar-dark navbar-expand-sm">
             <ul class="navbar-nav">
-              <li class="nav-item">
+                <li class="nav-item">
                 <a class="nav-link" href="/">MyWines</a>
-              </li>
-              <li class="nav-item active">
+                </li>
+                <li class="nav-item active">
                 <a class="nav-link" href="/cellar">Weinkeller</a>
-              </li>
-              <li class="nav-item">
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="/winepairing">Wine Pairing</a>
-              </li>
+                </li>
             </ul>
-          </nav>
-        <h1>Details zu {{ wine.name }} {{ wine.year }}</h1>
-        <table>
-            <tr>
-                <th>Name</th>
-                <td>{{ wine.name }}</td>
-            </tr>
-            <tr>
-                <th>Jahrgang</th>
-                <td>{{ wine.year }}</td>
-            </tr>
-            <tr>
-                <th>Flaschengr&ouml;sse</th>
-                <td>{{ wine.size }}</td>
-            </tr>
-            <tr>
-                <th>Passende Gerichte</th>
-                <td>{{ wine.meals }}</td>
-            </tr>
-            <tr>
-                <th>Traubensorte</th>
-                <td>{{ wine.grape }}</td>
-            </tr>
-            <tr>
-                <th>Region</th>
-                <td>{{ wine.region }}</td>
-            </tr>
-            <tr>
-                <th>Bezahlter Preis in CHF</th>
-                <td>{{ wine.pricepaid }}</td>
-            </tr>
-        </table>
-        <a href="/cellar" class="btn btn-primary btn-sm" role="button">Zur&uuml;ck zum Weinkeller</a>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <h1>Details zu {{ wine.name }} {{ wine.year }}</h1>
+                    <table>
+                        <tr>
+                            <th>Name</th>
+                            <td>{{ wine.name }}</td>
+                        </tr>
+                        <tr>
+                            <th>Jahrgang</th>
+                            <td>{{ wine.year }}</td>
+                        </tr>
+                        <tr>
+                            <th>Flaschengr&ouml;sse</th>
+                            <td>{{ wine.size }}</td>
+                        </tr>
+                        <tr>
+                            <th>Passende Gerichte</th>
+                            <td>{{ wine.meals }}</td>
+                        </tr>
+                        <tr>
+                            <th>Traubensorte</th>
+                            <td>{{ wine.grape }}</td>
+                        </tr>
+                        <tr>
+                            <th>Region</th>
+                            <td>{{ wine.region }}</td>
+                        </tr>
+                        <tr>
+                            <th>Bezahlter Preis in CHF</th>
+                            <td>{{ wine.pricepaid }}</td>
+                        </tr>
+                    </table>
+                    <a href="/cellar" class="btn btn-primary btn-sm" role="button">Zur&uuml;ck zum Weinkeller</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
