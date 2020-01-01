@@ -62,6 +62,9 @@ def save_wines(wines):
     with open('data.json', 'w') as outfile:
         json.dump(wines, outfile)
 
+def wine_maturity(year,grape):
+    return "YEAR"
+
 # Hochfahren des Servers
 
 if __name__ == "__main__":

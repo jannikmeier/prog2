@@ -33,8 +33,7 @@
                             <th>Passende Gerichte</th>
                             <th>Traubensorte</th>
                             <th>Region</th>
-                            <th>(Bezahlter Preis in CHF)</th>
-                            <th>Anzahl Flaschen</th>
+                            <th>Bezahlter Preis</th>
                             <th>Trinkreife</th>
                             <th>&nbsp;</th>
                             <th>&nbsp;</th>
@@ -51,9 +50,8 @@
                             <td>{{ wine.region }}</td>
                             <td>{{ wine.pricepaid }}</td>
                             <td>&nbsp;</td>
-                            <td>&nbsp;</td>
                             <td><a href="detail/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button">Details</a></td>
-                            <td><a href="#" class="btn btn-secondary btn-sm" role="button">Getrunken</a></td>
+                            <td><a href="#" class="btn btn-secondary btn-sm" role="button" onclick="confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>
