@@ -30,6 +30,10 @@ def add_post():
 def winepairing():
     return render_template("winepairing.html", wines=load_wines())
 
+@app.route('/info')
+def info():
+    return render_template("info.html")
+
 # Weinverwaltung
 
 def load_wine_by_id(id):
