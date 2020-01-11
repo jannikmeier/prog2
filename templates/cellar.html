@@ -48,13 +48,19 @@
                             <td>{{ wine.name }}</td>
                             <td>{{ wine.year }}</td>
                             <td>{{ wine.size }}</td>
-                            <td>{{ wine.meals }}</td>
+                            <td>
+                                <ul>
+                                {% for meal in wine.meals %}
+                                    <li>{{ meal }}</li>
+                                {% endfor %}
+                                </ul>
+                            </td>
                             <td>{{ wine.grape }}</td>
                             <td>{{ wine.region }}</td>
                             <td>{{ wine.pricepaid }}</td>
-                            <td>&nbsp;</td>
+                            <td>{{ wine.winematurity }}</td>
                             <td><a href="detail/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button">Details</a></td>
-                            <td><a href="#" class="btn btn-secondary btn-sm" role="button" onclick="confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a></td>
+                            <td><a href="delete/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a></td>
                         </tr>
                         {% endfor %}
                     </tbody>
