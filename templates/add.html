@@ -27,36 +27,44 @@
                 <div class="col-sm">
                     <h1>Wein hinzuf&uuml;gen</h1>
                     <form method="POST" action="/add">
-                        <div>
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name"/>
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" id="name" name="name" required/>
+                            </div>
                         </div>
                         <div>
                             <label for="year">Jahrgang</label>
-                            <input type="text" id="year" name="year"/>
+                            <input type="number" id="year" name="year" min="1800" required/>
                         </div>
                         <div>
                             <label for="size">Flaschengr&ouml;sse</label>
-                            <input type="text" id="size" name="size"/>
+                            <!--<input type="number" id="size" name="size" min="37.5" max="1800" required/>-->
+                            <select id="size" name="size" required>
+                                <option value="37.5">37.5 cl</option>
+                                <option value="75" selected>75 cl</option>
+                                <option value="150">150 cl</option>
+                                <option value="300">300 cl</option>
+                            </select>
                         </div>
                         <div>
-                            <label for="meals">Passende Gerichte</label>
-                            <input type="text" id="meals" name="meals"/>
+                            <label for="meals">Passende Gerichte (kommasepariert)</label>
+                            <input type="text" id="meals" name="meals" required/>
                         </div>
                         <div>
                             <label for="grape">Traubensorte</label>
-                            <input type="text" id="grape" name="grape"/>
+                            <input type="text" id="grape" name="grape" required/>
                         </div>
                         <div>
                             <label for="region">Region</label>
-                            <input type="text" id="region" name="region"/>
+                            <input type="text" id="region" name="region" required/>
                         </div>
                         <div>
                             <label for="pricepaid">Bezahlter Preis in CHF</label>
-                            <input type="text" id="pricepaid" name="pricepaid"/>
+                            <input type="number" id="pricepaid" name="pricepaid" min="0" required/>
                         </div>
-                        <input type="submit" value="Wein hinzuf&uuml;gen"/>
-                        <a href="/cellar" class="btn btn-primary btn-sm" role="button">Abbrechen</a>
+                        <input class="btn btn-primary btn-sm" type="submit" value="Wein hinzuf&uuml;gen"/>
+                        <a href="/cellar" class="btn btn-secondary btn-sm" role="button">Abbrechen</a>
                     </form>
                 </div>
             </div>

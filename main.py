@@ -23,7 +23,15 @@ def add():
 
 @app.route('/add', methods=['POST']) # Post abfangen und Wein hinzufügen
 def add_post():
-    add_new_wine(request.form['name'], request.form['year'], request.form['size'], request.form['meals'], request.form['grape'], request.form['region'], request.form['pricepaid'])
+    add_new_wine(
+        request.form['name'],
+        request.form['year'],
+        request.form['size'],
+        request.form['meals'],
+        request.form['grape'],
+        request.form['region'],
+        request.form['pricepaid']
+    )
     return redirect('/cellar', code=302)
 
 @app.route('/delete/<id>', methods=['GET'])

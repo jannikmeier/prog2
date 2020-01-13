@@ -18,55 +18,58 @@
                     <a class="nav-link" href="/winepairing">Wine Pairing</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/info">Info</a>
+                    <a class="nav-link" href="/info">Info</a>
                 </li>
             </ul>
         </nav>
         <div class="container">
             <div class="row">
-              <div class="col-sm">
-                <h1>Weinkeller</h1>
-                <a href="/add" class="btn btn-primary btn-sm" role="button">Wein hinzuf&uuml;gen</a>
-                <table class="table table-sm table-striped">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Jahrgang</th>
-                            <th>Flaschengr&ouml;sse</th>
-                            <th>Passende Gerichte</th>
-                            <th>Traubensorte</th>
-                            <th>Region</th>
-                            <th>Bezahlter Preis</th>
-                            <th>Trinkreife</th>
-                            <th>&nbsp;</th>
-                            <th>&nbsp;</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for wine in wines %}
-                        <tr>
-                            <td>{{ wine.name }}</td>
-                            <td>{{ wine.year }}</td>
-                            <td>{{ wine.size }}</td>
-                            <td>
-                                <ul>
-                                {% for meal in wine.meals %}
-                                    <li>{{ meal }}</li>
-                                {% endfor %}
-                                </ul>
-                            </td>
-                            <td>{{ wine.grape }}</td>
-                            <td>{{ wine.region }}</td>
-                            <td>{{ wine.pricepaid }}</td>
-                            <td>{{ wine.winematurity }}</td>
-                            <td><a href="detail/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button">Details</a></td>
-                            <td><a href="delete/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a></td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                <div class="col-sm">
+                    <div class="card">
+                        <h5 class="card-header">Weinkeller</h5>
+                        <div class="card-body">
+                            <a href="/add" class="btn btn-primary btn-sm" role="button">Wein hinzuf&uuml;gen</a>
+                            <br/><br/>
+                            <table class="table table-sm table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Jahrgang</th>
+                                        <th>Flaschengr&ouml;sse</th>
+                                        <th>Passende Gerichte</th>
+                                        <th>Traubensorte</th>
+                                        <th>Region</th>
+                                        <!--<th>Bezahlter Preis</th>-->
+                                        <th>Trinkreife</th>
+                                        <th>&nbsp;</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for wine in wines %}
+                                    <tr>
+                                        <td>{{ wine.name }}</td>
+                                        <td>{{ wine.year }}</td>
+                                        <td>{{ wine.size }} cl</td>
+                                        <td>
+                                            {% for meal in wine.meals %}
+                                            <span class="badge badge-pill badge-dark">{{ meal }}</span>
+                                            {% endfor %}
+                                        </td>
+                                        <td>{{ wine.grape }}</td>
+                                        <td>{{ wine.region }}</td>
+                                        <!--<td>CHF {{ wine.pricepaid }}</td>-->
+                                        <td>ab {{ wine.winematurity }}</td>
+                                        <td><a href="detail/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button">Details</a></td>
+                                        <td></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
         </div>
     </body>
 </html>

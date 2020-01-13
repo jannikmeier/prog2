@@ -2,7 +2,7 @@ nav.navbar {
     background-color: rgba(94, 24, 37, 1);
 }
 
-.btn-primary {
+/*.btn-primary {
     background-color: rgba(94, 24, 37, 1);
     border-color: rgba(94, 24, 37, 1);
 }
@@ -10,7 +10,7 @@ nav.navbar {
 .btn-primary:hover {
     background-color: rgba(94, 24, 37, 0.8);
     border-color: rgba(94, 24, 37, 0.8);
-}
+}*/
 
 .row {
     margin-top: 50px;
