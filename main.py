@@ -54,6 +54,10 @@ def winepairing_overview():
 def info():
     return render_template('info.html')
 
+@app.route('/readme')
+def readme():
+    return render_template('./README.md')
+
 # Starten des Servers
 
 if __name__ == '__main__':

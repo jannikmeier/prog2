@@ -26,9 +26,8 @@
           <div class="row">
             <div class="col-lg-4">
               <div class="card">
-                <h5 class="card-header">MyWines</h5>
+                <h4 class="card-header">MyWines</h4>
                 <div class="card-body">
-                  <h5 class="card-title">Herzlich Willkommen</h5>
                   <p class="card-text">MyWines ist dazu da, um deinen Weinkeller virtuell zu verwalten.</p>
                   <a href="/info" class="btn btn-dark" role="button">Info</a>
                 </div>
@@ -36,7 +35,7 @@
             </div>
             <div class="col-lg-4">
               <div class="card">
-                <h5 class="card-header">Weinkeller</h5>
+                <h4 class="card-header">Weinkeller</h4>
                 <div class="card-body">
                   <a href="/cellar" class="btn btn-dark" role="button">Weinkeller</a>
                 </div>
@@ -44,12 +43,12 @@
             </div>
             <div class="col-lg-4">
               <div class="card">
-                <h5 class="card-header">Wine Pairing</h5>
+                <h4 class="card-header">Wine Pairing</h4>
                 <div class="card-body">
-                  <h5 class="card-title">Welcher Wein zu welchem Essen?</h5>
-                  <form action="winepairing" class="form-inline">
+                  <p class="card-text">Welcher Wein zu welchem Essen?</p>
+                  <form action="winepairing" class="form-inline" method="GET">
                     <label class="sr-only" for="meal">Meal</label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="meal" placeholder="Pasta, Steak, etc." style="width:inherit;"/>
+                    <input type="text" class="form-control" id="meal" name="meal" placeholder="Pasta, Steak, etc."/>
                     <button type="submit" class="btn btn-dark mb-2">Passenden Wein dazu finden</button>
                   </form>
                 </div>

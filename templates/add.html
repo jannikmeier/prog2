@@ -27,45 +27,56 @@
                 <div class="col-sm">
                     <div class="card">
                         <form method="POST" action="/add">
-                            <h5 class="card-header">Wein hinzuf&uuml;gen</h5>
+                            <h4 class="card-header">Wein hinzuf&uuml;gen</h4>
                             <div class="card-body">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Name des Weins" required/>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Name des Weins" required/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="year">Jahrgang</label>
+                                        <input type="number" class="form-control" id="year" name="year" min="1900" placeholder="Jahrgang ab 1900" required/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="year">Jahrgang</label>
-                                    <input type="number" class="form-control" id="year" name="year" min="1900" placeholder="Jahrgang ab 1900" required/>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="size">Flaschengr&ouml;sse</label>
+                                        <select class="form-control" id="size" name="size" required>
+                                            <option value="37.5">37.5 cl (Demi)</option>
+                                            <option value="75" selected>75 cl (Normalflasche)</option>
+                                            <option value="150">150 cl / 1.5 l (Magnum)</option>
+                                            <option value="300">300 cl / 3 l (Doppel-Magnum)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="meals">Passende Gerichte</label>
+                                        <input type="text" class="form-control" id="meals" name="meals" placeholder="Komma-separierte Liste mit Essen, das zum Wein passt" required/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="size">Flaschengr&ouml;sse</label>
-                                    <select class="form-control" id="size" name="size" required>
-                                        <option value="37.5">37.5 cl (Demi)</option>
-                                        <option value="75" selected>75 cl (Normalflasche)</option>
-                                        <option value="150">150 cl / 1.5 l (Magnum)</option>
-                                        <option value="300">300 cl / 3 l (Doppel-Magnum)</option>
-                                    </select>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="grape">Traubensorte</label>
+                                        <input type="text" class="form-control" id="grape" name="grape" placeholder="Traubensorte (z.B. Tempranillo, Primitivo oder Syrah)" required/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="region">Region</label>
+                                        <input type="text" class="form-control" id="region" name="region" placeholder="Region, aus der der Wein stammt" required/>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="meals">Passende Gerichte</label>
-                                    <input type="text" class="form-control" id="meals" name="meals" placeholder="Komma-separierte Liste mit Essen, das zum Wein passt" required/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="grape">Traubensorte</label>
-                                    <input type="text" class="form-control" id="grape" name="grape" placeholder="Traubensorte (z.B. Tempranillo, Primitivo oder Syrah)" required/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="region">Region</label>
-                                    <input type="text" class="form-control" id="region" name="region" placeholder="Region, aus der der Wein stammt" required/>
-                                </div>
-                                <div class="form-group">
-                                    <label for="pricepaid">Bezahlter Preis in CHF</label>
-                                    <input type="number" class="form-control" id="pricepaid" name="pricepaid" min="0" placeholder="Betrag in CHF" required/>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="pricepaid">Bezahlter Preis in CHF</label>
+                                        <input type="number" class="form-control" id="pricepaid" name="pricepaid" min="0" placeholder="Betrag in CHF" required/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        &nbsp;
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-footer">
-                                <input class="btn btn-success btn-sm" type="submit" value="Speichern"/>
-                                <a href="/cellar" class="btn btn-secondary btn-sm" role="button">Abbrechen</a>
+                                <input class="btn btn-success" type="submit" value="Speichern"/>
+                                <a href="/cellar" class="btn btn-secondary" role="button">Abbrechen</a>
                             </div>
                         </form>
                     </div>

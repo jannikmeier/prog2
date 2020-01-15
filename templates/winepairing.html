@@ -26,12 +26,12 @@
           <div class="row">
             <div class="col-sm">
               <div class="card">
-                <h5 class="card-header">Wine Pairing</h5>
+                <h4 class="card-header">Wine Pairing</h4>
                 <div class="card-body">
                   <p>Welcher Wein zu welchem Essen?</p>
                   <form action="winepairing" class="form-inline" method="POST">
-                    <label class="sr-only" for="meal">Meal</label>
-                    <input type="text" class="form-control mb-2 mr-sm-2" id="meal" name="meal" placeholder="Pasta, Steak, etc." style="width:inherit;"/>
+                    <label for="meal">Meal</label>
+                    <input type="text" class="form-control" id="meal" name="meal" placeholder="Pasta, Steak, etc."/>
                     <button type="submit" class="btn btn-dark mb-2">Passenden Wein dazu finden</button>
                   </form>
                   {% if wines is defined %}

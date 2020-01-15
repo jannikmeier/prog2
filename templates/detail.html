@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="card">
-                        <h5 class="card-header">Details zu {{ wine.name }} {{ wine.year }}</h5>
+                        <h4 class="card-header">Details zu {{ wine.name }} {{ wine.year }}</h4>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-sm table-striped table-bordered">
@@ -46,7 +46,7 @@
                                         <th>Passende Gerichte</th>
                                         <td>
                                             {% for meal in wine.meals %}
-                                            <span class="badge badge-pill badge-dark">{{ meal }}</span>
+                                            <span class="badge badge-pill badge-secondary">{{ meal }}</span>
                                             {% endfor %}
                                         </td>
                                     </tr>
@@ -63,15 +63,15 @@
                                         <td>CHF {{ wine.pricepaid }}</td>
                                     </tr>
                                     <tr>
-                                        <th>Trinkreife</th>
+                                        <th>Trinkreif</th>
                                         <td>ab {{ wine.winematurity }}</td>
                                     </tr>
                                 </table>
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="/cellar" class="btn btn-secondary btn-sm" role="button">Zur&uuml;ck zum Weinkeller</a>
-                            <a href="/delete/{{ wine.id }}" class="btn btn-danger btn-sm" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a>
+                            <a href="/cellar" class="btn btn-secondary" role="button">Zur&uuml;ck zum Weinkeller</a>
+                            <a href="/delete/{{ wine.id }}" class="btn btn-danger" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a>
                         </div>
                     </div>
                 </div>

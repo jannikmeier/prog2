@@ -13,13 +13,14 @@ nav.navbar {
 }*/
 
 .row {
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 hr {
     margin: 25px 0;
 }
 
-h5.card-header {
+h4.card-header,
+a#winedetails {
     color: rgba(94, 24, 37, 1);
 }
