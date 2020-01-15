@@ -19,3 +19,7 @@ nav.navbar {
 hr {
     margin: 25px 0;
 }
+
+h5.card-header {
+    color: rgba(94, 24, 37, 1);
+}

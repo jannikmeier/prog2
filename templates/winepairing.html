@@ -25,39 +25,39 @@
         <div class="container">
           <div class="row">
             <div class="col-sm">
-              <h1>Wine Pairing</h1>
-              <p>Welcher Wein zu welchem Essen?</p>
-              <form action="winepairing" class="form-inline" method="POST">
-                <label class="sr-only" for="meal">Meal</label>
-                <input type="text" class="form-control mb-2 mr-sm-2" id="meal" name="meal" placeholder="Pasta, Steak, etc." style="width:inherit;"/>
-                <button type="submit" class="btn btn-primary mb-2">Passenden Wein dazu finden</button>
-              </form>
-
-              <br />
-              <br />
-
-              {% if wines is defined %}
-                {% for wine in wines %}
-                <tr>
-                    <td>{{ wine.name }}</td>
-                    <td>{{ wine.year }}</td>
-                    <td>{{ wine.size }}</td>
-                    <td>
-                        <ul>
-                        {% for meal in wine.meals %}
-                            <li>{{ meal }}</li>
-                        {% endfor %}
-                        </ul>
-                    </td>
-                    <td>{{ wine.grape }}</td>
-                    <td>{{ wine.region }}</td>
-                    <td>{{ wine.pricepaid }}</td>
-                    <td>{{ wine.winematurity }}</td>
-                    <td><a href="detail/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button">Details</a></td>
-                    <td><a href="delete/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a></td>
-                </tr>
-                {% endfor %}
-              {% endif %}
+              <div class="card">
+                <h5 class="card-header">Wine Pairing</h5>
+                <div class="card-body">
+                  <p>Welcher Wein zu welchem Essen?</p>
+                  <form action="winepairing" class="form-inline" method="POST">
+                    <label class="sr-only" for="meal">Meal</label>
+                    <input type="text" class="form-control mb-2 mr-sm-2" id="meal" name="meal" placeholder="Pasta, Steak, etc." style="width:inherit;"/>
+                    <button type="submit" class="btn btn-dark mb-2">Passenden Wein dazu finden</button>
+                  </form>
+                  {% if wines is defined %}
+                    {% for wine in wines %}
+                    <tr>
+                        <td>{{ wine.name }}</td>
+                        <td>{{ wine.year }}</td>
+                        <td>{{ wine.size }}</td>
+                        <td>
+                            <ul>
+                            {% for meal in wine.meals %}
+                                <li>{{ meal }}</li>
+                            {% endfor %}
+                            </ul>
+                        </td>
+                        <td>{{ wine.grape }}</td>
+                        <td>{{ wine.region }}</td>
+                        <td>{{ wine.pricepaid }}</td>
+                        <td>{{ wine.winematurity }}</td>
+                        <td><a href="detail/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button">Details</a></td>
+                        <td><a href="delete/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a></td>
+                    </tr>
+                    {% endfor %}
+                  {% endif %}
+                </div>
+              </div>
             </div>
           </div>
         </div>
