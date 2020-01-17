@@ -1,7 +1,9 @@
+{# MyWines Wein hinzufügen Seite by Jannik Meier #}
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Wein hinzuf&uuml;gen | MyWines</title>
+        <title>Wein hinzufügen | MyWines</title>
         <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../static/main.css">
     </head>
@@ -27,7 +29,7 @@
                 <div class="col-sm">
                     <div class="card">
                         <form method="POST" action="/add">
-                            <h4 class="card-header">Wein hinzuf&uuml;gen</h4>
+                            <h4 class="card-header">Wein hinzufügen</h4>
                             <div class="card-body">
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
@@ -41,7 +43,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="size">Flaschengr&ouml;sse</label>
+                                        <label for="size">Flaschengrösse</label>
                                         <select class="form-control" id="size" name="size" required>
                                             <option value="37.5">37.5 cl (Demi)</option>
                                             <option value="75" selected>75 cl (Normalflasche)</option>
@@ -66,8 +68,8 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="pricepaid">Bezahlter Preis in CHF</label>
-                                        <input type="number" class="form-control" id="pricepaid" name="pricepaid" min="0" placeholder="Betrag in CHF" required/>
+                                        <label for="pricepaid">Bezahlter Preis gerundet auf ganze Schweizer Franken</label>
+                                        <input type="number" class="form-control" id="pricepaid" name="pricepaid" min="0" placeholder="Betrag in CHF (nur ganze Zahlen)" required/>
                                     </div>
                                     <div class="form-group col-md-6">
                                         &nbsp;

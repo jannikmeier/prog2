@@ -1,24 +1,8 @@
-nav.navbar {
-    background-color: rgba(94, 24, 37, 1);
-}
+/* MyWines Styles by Jannik Meier */
 
-/*.btn-primary {
-    background-color: rgba(94, 24, 37, 1);
-    border-color: rgba(94, 24, 37, 1);
-}
+nav.navbar { background-color: rgba(94, 24, 37, 1); }
 
-.btn-primary:hover {
-    background-color: rgba(94, 24, 37, 0.8);
-    border-color: rgba(94, 24, 37, 0.8);
-}*/
-
-.row {
-    margin: 50px 0;
-}
-
-hr {
-    margin: 25px 0;
-}
+.card { margin: 50px 0; }
 
 h4.card-header,
 a#winedetails {

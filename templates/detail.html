@@ -1,7 +1,9 @@
+{# MyWines Wein Detail Seite by Jannik Meier #}
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ wine.name }} {{ wine.year }} | MyWines</title>
+        <title>{{ wine.name }} {{ wine.year }} | MyWines</title>{# Seitentitel dynamisch anhand des Weinnamens und des Jahrganges #}
         <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../static/main.css">
     </head>
@@ -39,7 +41,7 @@
                                         <td>{{ wine.year }}</td>
                                     </tr>
                                     <tr>
-                                        <th>Flaschengr&ouml;sse</th>
+                                        <th>Flaschengrösse</th>
                                         <td>{{ wine.size }} cl</td>
                                     </tr>
                                     <tr>
@@ -70,8 +72,8 @@
                             </div>
                         </div>
                         <div class="card-footer">
-                            <a href="/cellar" class="btn btn-secondary" role="button">Zur&uuml;ck zum Weinkeller</a>
-                            <a href="/delete/{{ wine.id }}" class="btn btn-danger" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a>
+                            <a href="/cellar" class="btn btn-secondary" role="button">Zum Weinkeller</a>
+                            <a href="/delete/{{ wine.id }}" class="btn btn-danger" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gelöscht. Fortfahren?');">Getrunken</a>
                         </div>
                     </div>
                 </div>

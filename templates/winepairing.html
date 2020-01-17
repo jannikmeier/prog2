@@ -1,3 +1,5 @@
+{# MyWines Wine Pairing by Jannik Meier #}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -28,33 +30,49 @@
               <div class="card">
                 <h4 class="card-header">Wine Pairing</h4>
                 <div class="card-body">
-                  <p>Welcher Wein zu welchem Essen?</p>
-                  <form action="winepairing" class="form-inline" method="POST">
-                    <label for="meal">Meal</label>
-                    <input type="text" class="form-control" id="meal" name="meal" placeholder="Pasta, Steak, etc."/>
-                    <button type="submit" class="btn btn-dark mb-2">Passenden Wein dazu finden</button>
+                  <form action="winepairing" method="POST">
+                    <div class="form-group">
+                      <label for="meal">Welcher Wein passt zum heutigen Essen? Geben Sie ein Gericht ein und finden Sie jetzt den passenden Wein dazu!</label>
+                      <input type="text" class="form-control" id="meal" name="meal" placeholder="z.B. Pasta oder Fisch" required/>
+                    </div>
+                    <button type="submit" class="btn btn-dark">Finden</button>
                   </form>
+                  {# Wenn "wines" definiert ist, resp. Suche ausgeführt wurde... #}
                   {% if wines is defined %}
-                    {% for wine in wines %}
-                    <tr>
-                        <td>{{ wine.name }}</td>
-                        <td>{{ wine.year }}</td>
-                        <td>{{ wine.size }}</td>
-                        <td>
-                            <ul>
-                            {% for meal in wine.meals %}
-                                <li>{{ meal }}</li>
-                            {% endfor %}
-                            </ul>
-                        </td>
-                        <td>{{ wine.grape }}</td>
-                        <td>{{ wine.region }}</td>
-                        <td>{{ wine.pricepaid }}</td>
-                        <td>{{ wine.winematurity }}</td>
-                        <td><a href="detail/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button">Details</a></td>
-                        <td><a href="delete/{{ wine.id }}" class="btn btn-secondary btn-sm" role="button" onclick="return confirm('Dadurch wird der Wein aus dem Keller gel&ouml;scht. Fortfahren?');">Getrunken</a></td>
-                    </tr>
-                    {% endfor %}
+                    <hr/>
+                    {# Wenn mindestens ein Wein gefunden wurde... #}
+                    {% if wines|length > 0 %}
+                      <p class="card-text">Folgende Empfehlung kann zu Ihrem gesuchten Gericht gemacht werden:</p>
+                      <div class="table-responsive">
+                        <table class="table table-sm table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Jahrgang</th>
+                                    <th>Traubensorte</th>
+                                    <th>Region</th>
+                                    <th>Trinkreif</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for wine in wines %}
+                                <tr>
+                                    <td>{{ wine.name }}</td>
+                                    <td>{{ wine.year }}</td>
+                                    <td>{{ wine.grape }}</td>
+                                    <td>{{ wine.region }}</td>
+                                    <td>ab {{ wine.winematurity }}</td>
+                                    <td><a href="detail/{{ wine.id }}" id="winedetails">Details</a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                      </div>
+                    {# Wenn kein Wein gefunden wurde... #}
+                    {% else %}
+                      <div class="alert alert-danger" role="alert">Leider konnte zu Ihrem gesuchten Gericht kein passender Wein gefunden werden.</div>
+                    {% endif %}
                   {% endif %}
                 </div>
               </div>
